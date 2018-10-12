@@ -41,7 +41,7 @@ int _tmain( int argc, _TCHAR* argv[] )
 	STARTUPINFO si;
 	memset( &si, 0, sizeof( si ) );
 	si.cb = sizeof( si );
-	si.lpDesktop = L"";
+	si.lpDesktop = (wchar_t*)L"";
 	si.lpTitle = (wchar_t*)baseName.c_str();
 
 	//pass on whatever it is we are using as stdandard IO
