@@ -24,10 +24,10 @@ int _tmain( int argc, _TCHAR* argv[] )
 	std::wstring exeName;
 
 	//strip off the console part of the name:
-	std::wstring::size_type ix = module.rfind( L"." );
+	std::wstring::size_type ix = module.find( L"Console" );
 	if( ix != std::wstring::npos )
 	{
-		exeName = module.substr( 0, ix-strlen("Console") ) + L".exe";
+		exeName = module.replace( ix, strlen("Console"), L"" );
 	}
 	
 	//find basename minus the .exe
