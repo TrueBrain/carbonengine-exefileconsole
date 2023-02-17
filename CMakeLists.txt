@@ -25,6 +25,20 @@ target_compile_definitions(ExeFileConsole PRIVATE NDEBUG _CONSOLE _UNICODE UNICO
 include(CcpGlobalSettings)
 include(CcpPackageConfigHelpers)
 
+set(SRC_FILES
+        ExeFileConsole.cpp
+        StdAfx.cpp)
+
+set(PUBLIC_HEADER_FILES "")
+
+ccp_add_library(ExeFileConsole SHARED ${SRC_FILES})
+
+get_target_property(_SOURCES ExeFileConsole SOURCES)
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}"
+        PREFIX "Sources"
+        FILES ${_SOURCES}
+        )
+
 # Provide an install target if this is the top level project only
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     # Install rule to ensure that our runtime and linker files are in the expected, platform-specific folders
