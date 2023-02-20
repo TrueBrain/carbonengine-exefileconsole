@@ -33,17 +33,6 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
             TARGETS ExeFileConsole
             EXPORT ExeFileConsoleTargets
             CONFIGURATIONS ${CMAKE_CONFIGURATION_TYPES}
-            ARCHIVE DESTINATION lib/${CCP_PLATFORM}/${CCP_ARCHITECTURE}/${CCP_TOOLSET}/
-            LIBRARY DESTINATION lib/${CCP_PLATFORM}/${CCP_ARCHITECTURE}/${CCP_TOOLSET}/
             RUNTIME DESTINATION bin/${CCP_PLATFORM}/${CCP_ARCHITECTURE}/${CCP_TOOLSET}/
     )
-    # Install rule for available public headers
-    install(FILES ${PUBLIC_HEADER_FILES} DESTINATION include)
-
-    configure_ccp_vendor_config_file(
-            TARGET ExeFileConsole
-            DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/ExeFileConsoleConfig.cmake"
-            DEPENDENCIES ""
-    )
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ExeFileConsoleConfig.cmake DESTINATION .)
 endif()
