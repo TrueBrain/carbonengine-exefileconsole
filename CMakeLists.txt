@@ -17,13 +17,13 @@ endif()
 file(TO_CMAKE_PATH "$ENV{CCP_EVE_PERFORCE_BRANCH_PATH}" BRANCH_ROOT_DIR)
 list(INSERT CMAKE_MODULE_PATH 0 ${BRANCH_ROOT_DIR}/cmake)
 
-add_executable(ExeFileConsole
+include(CcpGlobalSettings)
+include(CcpPackageConfigHelpers)
+
+ccp_add_executable(ExeFileConsole
     ExeFileConsole.cpp
 )
 target_compile_definitions(ExeFileConsole PRIVATE NDEBUG _CONSOLE _UNICODE UNICODE)
-
-include(CcpGlobalSettings)
-include(CcpPackageConfigHelpers)
 
 
 # Provide an install target if this is the top level project only
