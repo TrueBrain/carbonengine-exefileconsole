@@ -1,5 +1,5 @@
 # Carbon ExeFile Console
-> Elements used to build the console for ExeFile
+> Wrapper to run exefile processes from a command shell without spawning a new command shell process
 
 ## Building
 
