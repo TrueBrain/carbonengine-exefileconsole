@@ -64,7 +64,7 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String) : 
 
 
     vcs {
-        root(AbsoluteId("Carbon_Exefileconsole_Exefileconsole"),"+:. => %github_checkout_folder%")
+        root(AbsoluteId("Carbon_CarbonExefileconsole_GitGithubComCcpgamesCarbonExefileconsoleGitRefsHeadsFeatureVcpkgMigration"),"+:. => %github_checkout_folder%")
         root(AbsoluteId("CarbonPipelineTools"), "+:. => carbon_pipeline_tools")
         cleanCheckout = true
     }
@@ -124,7 +124,7 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String) : 
 
     triggers {
         vcs {
-            triggerRules = "+:root=${AbsoluteId("Carbon_Exefileconsole_Exefileconsole").id}:."
+            triggerRules = "+:root=${AbsoluteId("Carbon_CarbonExefileconsole_GitGithubComCcpgamesCarbonExefileconsoleGitRefsHeadsFeatureVcpkgMigration").id}:."
 
             param("disabled", "true")
         }
@@ -132,7 +132,7 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String) : 
 
     features {
         pullRequests {
-            vcsRootExtId = "${AbsoluteId("Carbon_Exefileconsole_Exefileconsole")}"
+            vcsRootExtId = "${AbsoluteId("Carbon_CarbonExefileconsole_GitGithubComCcpgamesCarbonExefileconsoleGitRefsHeadsFeatureVcpkgMigration")}"
             provider = github {
                 authType = token {
                     token = "credentialsJSON:06ae89f1-d5f2-4c8d-a91a-9712c233ce06"
