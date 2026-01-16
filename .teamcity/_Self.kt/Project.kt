@@ -8,14 +8,16 @@ import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 object Project : Project({
 
-    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-exefileconsole"
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-geo2"
 
     params {
-        param("carbon_ref", "refs/heads/feature/vcpkg-migration")
+        /* before changing carbon_ref, make sure to disable automatic settings synchronization on teamcity */
+        param("carbon_ref", "refs/heads/main")
         param("carbon-pipeline-tools-ref", "refs/heads/main")
     }
     
     subProject(Windows.Project)
+    subProject(MacOS.Project)
 
     buildType(PublishToPerforce)
 })
