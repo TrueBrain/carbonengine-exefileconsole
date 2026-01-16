@@ -8,7 +8,7 @@ import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 object Project : Project({
 
-    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-geo2"
+    description = "Build / Publish pipeline for https://github.com/ccpgames/carbon-exefileconsole"
 
     params {
         /* before changing carbon_ref, make sure to disable automatic settings synchronization on teamcity */
@@ -17,7 +17,6 @@ object Project : Project({
     }
     
     subProject(Windows.Project)
-    subProject(MacOS.Project)
 
     buildType(PublishToPerforce)
 })
