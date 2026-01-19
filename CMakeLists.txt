@@ -2,9 +2,10 @@ cmake_minimum_required(VERSION 3.16)
 
 project(ExeFileConsole VERSION 1.0.0)
 
-include(cmake/CcpGlobalSettings.cmake)
 include(cmake/CcpTargetConfigurations.cmake)
+include(cmake/CcpDocsGenerator.cmake)
 include(cmake/CcpPackageConfigHelpers.cmake)
+include(cmake/CcpBuildConfigurations.cmake)
 
 ccp_add_executable(ExeFileConsole
     ExeFileConsole.cpp
