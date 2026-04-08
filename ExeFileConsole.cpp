@@ -1,3 +1,4 @@
+// Copyright © 2026 CCP ehf.
 // This is a launcher for a windows application.  It allows us to run it from a command shell
 // without spawning a new process.
 // It is actually name agnostic, so rename the first part of it to match the windows app 

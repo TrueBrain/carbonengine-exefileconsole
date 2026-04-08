@@ -1,3 +1,4 @@
+// Copyright © 2026 CCP ehf.
 package Windows
 
 import jetbrains.buildServer.configs.kotlin.DslContext
